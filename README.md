@@ -2,53 +2,39 @@
 
 Rest Api for generation valid criptocurrency addresses
 
-[![Built with Cookiecutter Django](https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg?logo=cookiecutter)](https://github.com/cookiecutter/cookiecutter-django/)
-[![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+# zeply-cryptoapi
 
-License: MIT
 
-## Settings
+### Initial Configuration
 
-Moved to [settings](http://cookiecutter-django.readthedocs.io/en/latest/settings.html).
 
-## Basic Commands
+1.- Clone this repository:
 
-### Setting Up Your Users
+                        git clone git@github.com:diegomazorra1/zeply.git
 
--   To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
+2.- Build project (inside of root folder in the same location that local.yml):
+ 
+                            make build
+                            
+3.- Run :
+ 
+                            make up
+                      
+                    
+                    
+4.- run swagger to have a better interface (CURL SCRIPTS ARE INCLUDED ):
 
--   To create a **superuser account**, use this command:
+              http://localhost:8000/api/docs/
+              
+              
+5.- Read the documentation (is in progress )
 
-        $ python manage.py createsuperuser
+              http://127.0.0.1:9000/
 
-For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
+6.- Run the unit tests:
+ 
+                        make testing
+              
+7.- Enjoy
+              
 
-### Type checks
-
-Running type checks with mypy:
-
-    $ mypy zeply_crypto_api
-
-### Test coverage
-
-To run the tests, check your test coverage, and generate an HTML coverage report:
-
-    $ coverage run -m pytest
-    $ coverage html
-    $ open htmlcov/index.html
-
-#### Running tests with pytest
-
-    $ pytest
-
-### Live reloading and Sass CSS compilation
-
-Moved to [Live reloading and SASS compilation](https://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html#sass-compilation-live-reloading).
-
-## Deployment
-
-The following details how to deploy this application.
-
-### Docker
-
-See detailed [cookiecutter-django Docker documentation](http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html).
